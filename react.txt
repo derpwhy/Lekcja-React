@@ -1,0 +1,76 @@
+rt {useState} from 'react';
+
+export default function App() {
+    const [adres, setAdres] = useState('')
+    const [login, setLogin] = useState('')
+    const [haslo, setHaslo] = useState('')
+
+    const [generujHaslo, setGenerujHaslo] = useState(true)
+
+    return (
+        <div>
+            <div>
+                <h1>
+                    Menedżer haseł
+                </h1>
+                <from>
+                <div>
+                    <label>Adres WWW</label>
+                    <input
+                        type="text"
+                        id="id"
+                        placeholder="Adres Strony WWW"
+                        value={adres}
+                        onChange={(e)=>setAdres(e.target.value)}
+                        />
+                </div>
+                </from>
+            </div>
+            <div>
+                <h1>
+                    Login
+                </h1>
+                <form>
+                    <div>
+                        <label>Login</label>
+                        <input
+                            type="text"
+                            type="login"
+                            placeholder="Login"
+                            value={login}
+                            onChange={(e)=>setLogin(e.target.value)}
+                            />
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox"
+                            type="generuj"
+                            checked={generujHaslo}
+                               onChange={(e)=>setGenerujHaslo(e.target.value)}
+                            />
+                        <label>Generuj haslo</label>
+                    </div>
+                </form>
+                <div>
+                    <h1>
+                        Haslo
+                    </h1>
+                    <form>
+                        <div>
+                            <label>Hasło</label>
+                            <input 
+                                type="password"
+                                id="haslo"
+                                placeholder="haslo"
+                                value={haslo}
+                                onChange={(e)=>SetHaslo(e.target.value)}
+                                />
+                        </div>
+                    </form>
+                    
+                </div>
+            
+            </div>     
+        </div>
+        
+    )
